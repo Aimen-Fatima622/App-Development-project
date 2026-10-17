@@ -12,14 +12,17 @@ class NaSConLeagueApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'NaSCon 26 League',
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(
-          seedColor: const Color(0xFF1E88E5),
-          primary: const Color(0xFF0D47A1),
-          secondary: const Color(0xFF00897B),
+      title: 'NaSCon 26 League — Obsidian Cyber-Athletics',
+      theme: ThemeData.dark().copyWith(
+        scaffoldBackgroundColor: const Color(0xFF0B0F17),
+        colorScheme: const ColorScheme.dark(
+          primary: Color(0xFF8B5CF6), // Primary Cyber Violet
+          secondary: Color(0xFF06B6D4), // Secondary Cyber Cyan
+          tertiary: Color(0xFF3B82F6), // Tertiary Electric Blue
+          surface: Color(0xFF111827),
+          background: Color(0xFF0B0F17),
         ),
-        useMaterial3: true,
+        cardColor: const Color(0xFF111827),
       ),
       home: const MainNavigationShell(),
     );
