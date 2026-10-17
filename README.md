@@ -32,6 +32,11 @@ curl http://localhost:8080/health
 Open in your browser:
 - [http://localhost:8080/docs](http://localhost:8080/docs)
 
+### 4. Mobile Application (Desk Check & PWA)
+Open directly on your laptop or phone browser:
+- [http://localhost:8080/mobile](http://localhost:8080/mobile)
+- Supports all 9 required screens, 5 demo accounts, offline queueing in Airplane mode, and one-tap conflict sync.
+
 ---
 
 ## Mandatory Demo Accounts (Section 8.3)

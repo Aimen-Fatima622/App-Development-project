@@ -9,6 +9,7 @@ from fastapi.responses import JSONResponse
 
 from app.build_apk import ensure_apk_exists
 from app.errors import AppException
+from app.mobile_web import MOBILE_HTML
 
 ensure_apk_exists()
 from app.fixtures import (
@@ -110,6 +111,14 @@ async def security_and_limit_middleware(request: Request, call_next):
 @app.get("/health")
 def health():
     return {"status": "ok"}
+
+
+# --- Mobile Web & PWA App for Mobile Judging ---
+@app.get("/mobile")
+@app.get("/app")
+def serve_mobile():
+    from fastapi.responses import HTMLResponse
+    return HTMLResponse(content=MOBILE_HTML)
 
 
 # --- Rate Limit Probe ---
